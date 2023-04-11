@@ -14,8 +14,9 @@ const SocialLoginBtn = ({ handleLogin }) => {
             <br />
             <LoginSocialFacebook
 
-                appId={process.env.REACT_APP_FB_APP_ID || '1439052896903542'}
+                appId={'606669034684433'}
 
+                //appId={process.env.REACT_APP_FB_APP_ID || '1439052896903542'}
                 onResolve={(response) => {
                     console.log(response)
                     handleLogin(response)
@@ -30,8 +31,8 @@ const SocialLoginBtn = ({ handleLogin }) => {
             <br />
 
             <LoginSocialGoogle
-                client_id={process.env.REACT_APP_GG_APP_ID || '121812674-ihun3omvgmd0udr8lgp54bnontmpuprj.apps.googleusercontent.com'}
-
+                client_id={ '690441400392-iaim9oh4p3bkbhbnlh0deabmq4v1biid.apps.googleusercontent.com'}
+                //client_id={process.env.REACT_APP_GG_APP_ID || '121812674-ihun3omvgmd0udr8lgp54bnontmpuprj.apps.googleusercontent.com'}
 
                 scope="openid profile email"
                 discoveryDocs="claims_supported"
@@ -52,3 +53,5 @@ const SocialLoginBtn = ({ handleLogin }) => {
 }
 
 export default SocialLoginBtn
+
+// > git ls-files --stage -- /Users/timeless/Desktop/Freelance_works/AB Experiment/client/src/componenets/Login/SocialLoginBtn.js [38ms]

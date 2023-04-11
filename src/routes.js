@@ -2,6 +2,7 @@ import { lazy, useEffect, Suspense, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NProgress from 'nprogress';
 import { useSelector } from 'react-redux';
+import axios from './axios';
 
 
 
@@ -29,7 +30,16 @@ const AppRoutes = () => {
     const [data, setData] = useState({});
     const userData = useSelector(state => state.user.user);
 
+
+    const connectSever=async()=> {
+
+        await axios.get('/api/v1/auth/').then(res=>console.log(res.data.msg)).catch(err=> console.log(err))
+
+    }
+    
+
     useEffect(() => {
+        connectSever();
         setData(userData);
     }, [data])
 

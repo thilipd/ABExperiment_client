@@ -4,7 +4,8 @@ import axios from 'axios';
 // axios.defaults.crossorigin = false;
 
 const instance = axios.create({
-    baseURL: ' http://localhost:8001',
+    baseURL: 'https://abexperiment.onrender.com',
+   // baseURL: ' http://localhost:8001',
     responseType: 'json',
     timeout: 10000,
 })
